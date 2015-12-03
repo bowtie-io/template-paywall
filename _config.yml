@@ -1,0 +1,83 @@
+# Site settings
+title: Your title - BowTie.io
+description: >
+  Write a description for your new BowTie site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+
+email: info@example.com
+
+logourl: /img/logo.png # Your logo or avatar
+
+author: Your Name
+
+author_thumbnail: /img/user1.png # default author avatar
+
+# Theme additions - please update the default values if you intend to use these variables
+
+google_analytics_id: ""  # Your google analytics ID (e.g. 'UA-XXXXXXXX-X')
+
+theme:
+
+  contact:                          # Contact info, leave blank to ignore
+    company:  Company Name
+    address:  1644 Platte
+    city:     Denver
+    state:    CO
+    zip:      80202
+    country:  USA
+    phone:
+    latlng:   39.733536,-104.992611 # (e.g. '39.733536,-104.992611')
+    twitter:  twitter               # (e.g. 'https://twitter.com/twitter')
+    facebook: facebook              # (e.g. 'https://www.facebook.com/facebook')
+    github:                         # (e.g. 'https://github.com/github')
+    instagram:                      # (e.g. 'https://instagram.com/instagram')
+    flickr:                         # (e.g. 'groups/2772799@N24/')
+    linkedin:                       # (e.g. 'company/example')
+    youtube:                        # (e.g. 'channel/UCovWO5keLOLcLu8WdO-ABJw')
+
+  authors:                          # Author attribution data
+    john:
+      display_name: John Doe
+      gravatar:     1985af848d639efd74c6af48f242cfa8  # use hash only (e.g. '1985af848d639efd74c6af48f242cfa8')
+      email:                        # (e.g. 'info@example.com')
+      web:                          # (e.g. 'https://example.com')
+      twitter:                      # (e.g. 'https://twitter.com/twitter')
+      facebook:                     # (e.g. 'https://www.facebook.com/facebook')
+      github:                       # (e.g. 'https://github.com/github')
+      instagram:                    # (e.g. 'https://instagram.com/instagram')
+      flickr:                       # (e.g. 'groups/2772799@N24/')
+      linkedin:                     # (e.g. 'company/example')
+      youtube:                      # (e.g. 'channel/UCovWO5keLOLcLu8WdO-ABJw')
+
+  disqus_id:        bowtieexample   # From your Add This account (e.g. 'bowtieexample')
+
+  addthis_id:                       # From your Add This account (e.g. 'ra-00000a0a00a00aaa')
+
+
+# Permalinks
+permalink:           /:categories/:title/
+relative_permalinks: false
+
+# Pagination config
+paginate: 5
+paginate_path: /page/:num
+
+# Jekyll build/resource locations
+
+# source:  .
+# destination: ./_site
+# plugins_dir: null
+# layouts_dir: ./_layouts
+# data_dir:    ./_data
+# includes_dir: ./_includes
+
+# Jekyll Handling Reading
+include:    [] # Specify files to be included in build that may be otherwise ignored (e.g. '[.htaccess]')
+
+keep_files: [] # Files/Folders located inside the ./_site folder to be retained on build (e.g.'[.git, .svn]')
+
+# Files/Folders to be excluded from generated '_site' folder
+exclude:
+  - .gitignore
+  - .sass-cache

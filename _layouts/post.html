@@ -1,0 +1,37 @@
+---
+layout: blog
+---
+{% if page.author %}
+  {% assign author = site.theme.authors[page.author] %}
+{% endif %}
+
+ <div class="post">
+  <article class="post-content blog-post-content">
+    {{ content }}
+  </article>
+  <div class="post-metadata">
+    {% if page.author %}
+    by <a href="//twitter.com/{{ author.twitter }}">{{ author.display_name }}</a>
+    {% endif %}
+    {{ page.date | date: "%b %-d, %Y" }}
+    {% if page.categories %}
+    <span class="category-list">&nbsp;|&nbsp; Categories: {% include category-list.html %}</span>
+    {% endif %}
+  </div>
+  <br />
+
+  {% if page.elsewhere %}
+  <h6 class="elsewhere">Reposted from:<a href="{{page.elsewhere-url}}">{{ page.elsewhere }}</a></h6>
+  {% endif %}
+
+  {% if page.share %}
+    {% include addthis.html %}
+  {% endif %}
+
+  {% if page.comments %}
+     {% include disqus.html %}
+  {% endif %}
+
+  {% include breadcrumb.html %}
+
+</div>

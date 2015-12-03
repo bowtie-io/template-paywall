@@ -1,0 +1,7 @@
+# /videos/.bowtie.yml
+
+permits:
+  plans:
+    - Free
+    - Premium
+    - Full

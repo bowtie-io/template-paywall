@@ -1,0 +1,6 @@
+# /premium/.bowtie.yml
+
+permits:
+  plans:
+    - Premium
+    - Full

@@ -1,0 +1,17 @@
+<div class="post-metadata">
+{% if post.author %}
+  <img class="img post-avatar pull-left" src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=64">
+  <span class="author">by {{ author.display_name }}</span>
+    {% if author.twitter %}
+      <span class="author-twitter"><a href="//twitter.com/{{ author.twitter }}"><i class="icon-twitter icon-1x"></i></a></span>
+    {% endif %}
+    {% if author.medium %}
+      <span class="author-medium"><a href="//medium.com/{{ author.medium }}"><i class="icon-medium-icon icon-1x"></i></a></span>
+    {% endif %}
+    {% if author.github %}
+      <span class="author-github"><a href="//github.com/{{ author.github }}"><i class="icon-github icon-1x"></i></a></span>
+    {% endif %}
+  |&nbsp;
+{% endif %}
+{{ post.date | date: "%b %-d, %Y" }}
+</div>

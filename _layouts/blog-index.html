@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+
+{% if page.masthead-img %}
+<style type="text/css">
+   .masthead {
+     background:url("{{ page.masthead-img }}") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    bottom: 0;
+    left: 0;
+    position: relative;
+    right: 0;
+    top: 0;
+    }
+</style>
+{% endif %}
+
+{% if page.masthead-img-pat %}
+<style type="text/css">
+   .masthead {
+    background:url("{{ page.masthead-img-pat }}") repeat;
+    position: relative;
+    }
+</style>
+{% endif %}
+
+
+  <body>
+    <div class="blog">
+      {% include flash.html %}
+      {% include header.html %}
+      <div id="content">
+        <div class="section masthead">
+          <header class="container">
+            <div class="col-sm-12 col-lg-12">
+              <h1 class="page-heading" style="text-align:center; font-weight:400 !important;">{{ page.title }}</h1>
+              <h3 class="post-subtitle" style="text-align:center; font-weight:300 !important;">{{ page.subtitle }}</h3>
+            </div>
+          </header>
+        </div>
+        <div class="section">
+          <div class="container">
+            {{ content }}
+          <hr>
+          <ol class="breadcrumb">
+            <li><a href="/">Main</a></li>
+            <li>Blog</li>
+          </ol>
+          </div>
+        </div>
+      </div>
+      {% include footer.html %}
+    </div>
+    {% include tracking.html %}
+
+    <!-- segment tracking -->
+    <script>
+      function load() {
+        analytics.page(‘blog’);
+      }
+      window.onload = load;
+    </script>
+  </body>
+
+</html>

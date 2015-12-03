@@ -1,0 +1,199 @@
+/*******************************************************/
+
+/* Add/remove custom styles to this theme file */
+
+/*******************************************************/
+
+/***** your custom styles ****/
+
+
+
+/***** fonts (use @import... to add custom webfonts) ****/
+
+$primary-font: null;
+$primary-font-weight: null;
+$primary-font-color: null;
+
+$secondary-font: null;
+$secondary-font-weight: null;
+$secondary-font-color: null;
+
+$header-font: null; /** h1, h2, h3, h4, h5 **/
+$header-font-weight: null;
+$header-font-color: null;
+
+$link-color: null;
+$link-weight: null;
+$link-hover-color: null;
+$link-hover-weight: null;
+
+/***** colors and highlights ****/
+
+$section: null;
+$section-font-color: null;
+
+$section-alt: null;
+$section-alt-font-color: null;
+
+$section-color: null;
+$section-color-font-color: null;
+
+$section-black: null;
+$section-black-font-color: null;
+
+$footer: null;
+$footer-font-color: null;
+$footer-icon-color: null;
+$footer-link-color: null;
+$footer-link-hover-color: null;
+
+$nav: null;
+$nav-hover: null;
+$nav-font-color: null;
+$nav-hover-font-color: null;
+
+/***** buttons ****/
+
+$default: null;
+$default-hover: null;
+$info: null;
+$info-hover: null;
+$success: null;
+$success-hover: null;
+$warning: null;
+$warning-hover: null;
+$radius: null;
+
+/***** background images ****/
+
+body {
+ background-image:url(/img/backgrounds/bg2.jpg) !important;
+}
+
+#team {
+ background-image:url(/img/backgrounds/bg2.jpg) !important;
+}
+
+/***** theme variables below this line ****/
+
+a {
+  font-weight: $link-weight !important;
+  color: $link-color !important;
+}
+
+a:hover, a:focus {
+  font-weight: $link-hover-weight !important;
+  color: $link-hover-color !important;
+}
+
+h1,h2,h3,h4,h5 {
+  font-weight: $header-font-weight;
+  font-family: $header-font, "Helvetica", sans-serif;
+  color: $header-font-color !important;
+}
+
+h3, h4 {
+  align-content: center;
+  text-transform: none;
+  font-family: $secondary-font !important;
+  color: $secondary-font-color !important;
+}
+
+body, p {
+font-family: $primary-font, "Helvetica", sans-serif !important;
+font-weight:$primary-font-weight !important;
+color:$primary-font-color !important;
+}
+
+.section {
+  background-color: $section;
+  h1, h2, h3 {
+    color:$section-font-color !important;
+  }
+}
+.section.alt {
+  background-color: $section-alt;
+  h1, h2, h3 {
+    color:$section-alt-font-color !important;
+  }
+}
+
+.section.color {
+  background-color: $section-color !important;
+  h1, h2, h3 { color:$section-color-font-color !important;
+  }
+}
+
+.section.black {
+  background-color: $section-black !important;
+  h1, h2, h3 { color:$section-black-font-color !important;
+  }
+}
+
+#footer {
+  background-color:$footer;
+  color:$footer-font-color;
+  .subfooter {
+    color:$footer-font-color;
+    }
+  a, a:visited, a:hover, a:active {
+    color:$footer-link-color !important;
+    }
+  a:hover, a:active {
+    color:$footer-link-hover-color !important;
+    }
+  i {
+    color:$footer-icon-color;}
+}
+
+#nav.navbar {
+  background-color:$nav;
+}
+
+.nav > li > a, .nav > li, .navbar-toggle.btn-transparent {
+color:$nav-font-color !important;
+}
+
+.nav > li > a:hover, .nav > li > a:focus, .navbar-toggle.btn-transparent:hover, .navbar-toggle.btn-transparent:focus {
+background-color:$nav-hover;
+color:$nav-hover-font-color !important;
+}
+
+.btn-default {
+  background-color:$default;
+  border-color:$default;
+}
+
+.btn-default:hover,.btn-default:active  {
+  background-color:$default-hover;
+  border-color:$default-hover;
+}
+
+.btn-info {
+  background-color:$info;
+  border-color:$info;
+}
+.btn-info:hover,.btn-info:active  {
+  background-color:$info-hover;
+  border-color:$info-hover;
+}
+
+.btn-warning {
+  background-color:$warning;
+  border-color:$warning;
+}
+
+.btn-warning:hover,.btn-warning:active  {
+  background-color:$warning-hover;
+  border-color:$warning-hover;
+}
+
+.btn-success {
+  background-color:$success;
+  border-color:$success;
+}
+
+.btn-success:hover,.btn-success:active  {
+  background-color:$success-hover;
+  border-color:$success-hover;
+}

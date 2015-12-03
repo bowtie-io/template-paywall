@@ -1,0 +1,35 @@
+---
+# this front matter renders the file as css
+---
+
+/******************* Map ****************************/
+
+/* all map containers must be full height */
+#map {
+  height: 100%;
+  width: 100%;
+  }
+
+#map-canvas {
+  width: 100%;
+  height: 500px;
+  padding:0px;
+  overflow:visible !important;
+}
+
+.company-location {
+  position: relative;
+  float: right;
+  top: 100px;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 3;
+  padding: 0px 40px 15px 25px;
+  border-radius: 1px 0 1px 1px;
+  color: #FFF;
+  width: 240px;
+  h4, p {color:#fff !important; margin-bottom:0;}
+}
+
+h4.company-location {
+  color:#fff !important;
+}

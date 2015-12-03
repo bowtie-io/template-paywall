@@ -1,0 +1,34 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="author" content="{{ site.author }}">
+  <meta name="generator" content="BowTie.io">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{% if page.browser_title %}{{ page.browser_title }}{% elsif page.title %}{{ page.title | append: ' - ' | append: site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.meta_description %}{{ page.meta_description }}{% else %}{{ site.description }}{% endif %}">
+  {% include open-graph.html %}
+
+  <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.baseurl | prepend: site.url }}">
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script type="text/javascript" src="https://bowtie.io/assets/bowtie.js"></script>
+  <script type="text/javascript" src="/bowtie/api/users/info.js"></script>
+  <script type="text/javascript" src="/vendor/bowtie/bowtie.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/js/theme.js"></script>
+  <script type="text/javascript" src="/js/flash.js"></script>
+  <script type="text/javascript" src="/js/authentication.js"></script>
+  <script type="text/javascript" src="/vendor/retina.js/dist/retina.js"></script>
+  <script type="text/javascript" src="/js/prospect.js"></script>
+  <script type="text/javascript" src="/js/smoothscroll.js"></script>
+
+  <link href="/css/main.css" rel="stylesheet">
+
+</head>

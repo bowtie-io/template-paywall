@@ -1,0 +1,26 @@
+---
+layout: default
+title: Terms of Service
+permalink: terms-of-service.html
+published: false
+
+company:  Official Company Name, LLC
+state:    Registered State
+county:   Registered County
+country:  Registered Country
+---
+
+{% comment %}
+  Usage:
+  ##########
+
+  1. See the documents in `_includes/terms-of-service/` to select the appropriate TOS for your project.
+  2. Change the "include" path below
+  3. Set the `published` variable above to true or remove the line.
+{% endcomment %}
+
+{% capture terms %}
+  {% include terms-of-service/downloadable_content.md %}
+{% endcapture %}
+
+{{ terms || markdownify }}

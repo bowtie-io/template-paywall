@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Error {{ page.title }} - {{ site.title }} - ⋈ BowTie.io</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ page.title }}">
+    <meta name="author" content="⋈ BowTie.io">
+    <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.baseurl | prepend: site.url }}">
+    <link href="/css/main.css" rel="stylesheet">
+
+  </head>
+
+  <body class="bg2">
+    <main class='container-fluid' role='main'>
+      <div class='content-wrap row'>
+        <div class='login-wrapper col-sm-12'>
+          {{ content }}
+        </div>
+
+    {% include error-footer.html %}
+
+      </div>
+    </main>
+  </body>
+
+</html>

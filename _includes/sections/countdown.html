@@ -1,0 +1,26 @@
+<link rel="stylesheet" type="text/css" href="/css/components/countdown.css"/>
+<script type="text/javascript" src="/vendor/jquery.countdown/dist/jquery.countdown.min.js"></script>
+<script type="text/javascript" src="/js/countdown.js"></script>
+
+<section class="countdown section alt">
+<a name="signup"></a>
+  <div class="row">
+  <!--Use data-countdown-date="2016/05/01" below to state the count down to date, use data-countdown-hide-oncomplete="true" to hide the count digitals on complete-->
+    <div class="count-down pull-center" id="count-down" data-countdown="2016/01/15" data-countdown-hide-oncomplete="true">
+      <span class="count"><span class="count-wrap"><span class="digits" id="days"></span> Days</span> </span>
+      <span class="count"><span class="count-wrap"><span class="digits" id="hours"></span> Hours</span> </span>
+      <span class="count"><span class="count-wrap"><span class="digits" id="minutes"></span> Mins</span> </span>
+      <span class="count"><span class="count-wrap"><span class="digits" id="seconds"></span> Secs</span></span>
+
+      <!--Optional count down complete message to display, remove to hide whole countdown block--><a name="signup"></a>
+      <div class="count-down-complete">
+        <h2>Get ready. We are in Beta.</h2>
+      </div>
+    </div>
+  </div>
+  <div class="container signup-form row-80">
+    <h1>Subscribe Form!</h1>
+    <h3>Collect email subscribers and countdown to your launch or event.</h3>
+    {% include subscriber-form.html %}
+  </div>
+</section>

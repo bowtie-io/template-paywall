@@ -1,0 +1,170 @@
+---
+# this front matter renders the file as css
+---
+
+/******************* User Cards ****************************/
+
+/* entire container, keeps perspective */
+.card-container {
+    -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+    -o-perspective: 800px;
+        perspective: 800px;
+        margin-bottom: 30px;
+}
+/* flip the pane when hovered */
+.card-container.flip:hover .card,
+.card-container.hover.manual-flip .card{
+  -webkit-transform: rotateY( 180deg );
+-moz-transform: rotateY( 180deg );
+-o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+
+
+.card-container.static:hover .card,
+.card-container.static.hover .card {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -o-transform: none;
+    transform: none;
+}
+
+/* hide back of pane during flip */
+.front, .back {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+        backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border:1px solid #ededed;
+  background-color: #FFF;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.front {
+  z-index: 2;
+}
+
+/* initially hidden pane */
+.back {
+  -webkit-transform: rotateY( 180deg );
+  -moz-transform: rotateY( 180deg );
+  -o-transform: rotateY( 180deg );
+  transform: rotateY( 180deg );
+  z-index: 3;
+  .btn-simple{
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+  }
+}
+
+.card {
+    -webkit-transition: -webkit-transform .5s;
+    -moz-transition: -moz-transform .5s;
+    -o-transition: -o-transform .5s;
+    transition: transform .5s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: relative;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 4px;
+    color: #333;
+    .cover{
+        height: 105px;
+        overflow: hidden;
+        border-radius: 4px 4px 0 0;
+        background-image: url('/img/backgrounds/argyle.png');
+        background-repeat:repeat;
+        height:80px;
+    }
+    .cover img{
+        width: 100%;
+    }
+    .user{
+        display: block;
+        height: 120px;
+        margin: -55px auto 0;
+        overflow: hidden;
+        width: 120px;
+    }
+    .user img{
+        width: 100%;
+    }
+
+    .content{
+        background-color: rgba(0, 0, 0, 0);
+        box-shadow: none;
+        padding: 10px 20px;
+    }
+    .content .main {
+        min-height: 160px;
+    }
+    .back .content .main {
+        min-height: 220px;
+    }
+    .name {
+        font-size: 22px;
+        line-height: 28px;
+        margin: 10px 0 0;
+        text-align: center;
+        text-transform: capitalize;
+
+    }
+    .name.reverse{
+      color:#ccc !important;
+    }
+    h5{
+        margin: 5px 0;
+        font-weight: 400;
+        line-height: 20px;
+    }
+    .user-type{
+        color: #666;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .footer {
+        border-top: 1px solid #ededed;
+        color: #666;
+        margin: 20px 0 0;
+        padding: 20px 0;
+        text-align: center;
+    }
+    .footer {
+      .btn-simple{
+          margin-top: -6px;
+      }
+    }
+    .header {
+        padding: 10px 20px;
+        height: 90px;
+    }
+    .quote{
+        color: #666;
+        font-size: 14px;
+        font-weight: 400;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+    .social-media {
+      margin-top:10px;
+    }
+}
+.card-container, .front, .back {
+  width: 100%;
+  max-width: 400px;
+  min-height: 420px;
+  border-radius: 4px;
+  margin:10px auto;
+}
+.user-card[class*="col"] {
+margin-bottom: 2em;
+min-height:240px;
+padding:15px;
+}

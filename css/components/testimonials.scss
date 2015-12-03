@@ -1,0 +1,75 @@
+---
+# this front matter renders the file as css
+---
+
+/****************** Testimonial Carousel ******************/
+
+#testimonial-carousel {
+  span {
+    word-break:keep-all;
+    }
+  img {
+    width: 80px;
+    height: 80px;
+    margin:0 30px 80px;
+    float:left;
+    vertical-align: middle;
+    }
+  .carousel-inner {
+    margin:30px auto 0 auto;
+    overflow: visible;
+      h1, h2, h3, h4, p {
+      text-align:left;
+      word-break:keep-all;
+      margin:0;
+      }
+    }
+  .carousel {
+    overflow: hidden !important;
+    width: auto !important;
+    }
+  .carousel-control {
+    width: 8%;
+    color: #ccc !important;
+      .icon-prev, .icon-next, .fa, .fa {
+        display: inline-block;
+        padding: 40px 0;
+      }
+      .fa {
+        font-size: 35px;
+        padding:180px 10px;
+      }
+    }
+  .carousel-control.left, .carousel-control.right {
+    background-image: none;
+    position: absolute !important;
+    height:100%;
+    margin-top:0px;
+  }
+  .carousel-control.left {
+    float:left;
+  }
+  .carousel-control.right {
+    float:right;
+  }
+  .testimonial .carousel-inner > .item {
+    transition: left 2200ms cubic-bezier(0.455, 0.03, 0.4, 0.955) 0s;
+    -webkit-transition: left 2200ms cubic-bezier(0.455, 0.03, 0.4, 0.955) 0s;
+  }
+  .carousel-caption {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    padding-top: 30px;
+    margin: 0 auto;
+    min-height:200px;
+    max-width: 600px;
+    h1, h2, h3, h4, p {
+      text-align: left !important;
+      word-break:keep-all;
+      margin:5px 0 0 0 !important;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Static Site with Paywall",
+  "description": "Landing page with Stripe paywall + blog templates.",
+  "author": "Chad Person <chad@bowtie.io>",
+  "version": "0.0.1",
+  "image_url": null,
+  "docs_link": "/docs/#projects"
+}

@@ -1,0 +1,13 @@
+<ul class="tag-box">
+{% assign tags_list = page.categories %}
+  {% if tags_list.first[0] == null %}
+    {% for tag in tags_list %}
+      <li class="label label-info"><a href="/archive/#{{ tag }}">{{ tag | capitalize }} <span>{{ page.tags[tag].size }}</span></a></li>
+    {% endfor %}
+  {% else %}
+    {% for tag in tags_list %}
+      <li class="label label-info"><a href="/archive/#{{ tag[0] }}">{{ tag[0] | capitalize }} <span>{{ tag[1].size }}</span></a></li>
+    {% endfor %}
+  {% endif %}
+{% assign tags_list = nil %}
+</ul>

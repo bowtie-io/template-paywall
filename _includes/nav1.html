@@ -1,0 +1,36 @@
+<!-- Brand and toggle grouped for mobile display -->
+<div class="navbar-header">
+  <button type="button" class="navbar-toggle btn-transparent" data-toggle="collapse" data-target=".navbar-1-collapse">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="fa fa-bars fa-lg"></span>
+    <span>&nbsp;Menu</span>
+  </button>
+</div>
+
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse navbar-1-collapse">
+  <ul class="nav navbar-nav">
+    {% for page in site.pages %}
+      {% unless page.exclude_from_nav %}
+        {% if page.title %}
+        <li>
+          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        </li>
+        {% endif %}
+      {% endunless %}
+    {% endfor %}
+        <!-- 'signed_in' or 'signed_out' classes hide/display elements based on user state -->
+        <li class="signed-out">
+          <a class="page-link" href="/users/sign_in">Sign In</a>
+        </li>
+        <li class="signed-out">
+          <a class="page-link" href="/users/sign_up">Register</a>
+        </li>
+        <li class="signed-in">
+          <a class="page-link" href="/users/sign_out">Sign Out</a>
+        </li>
+        <li class="signed-in">
+          <a class="page-link" href="/users/edit">Account</a>
+        </li>
+  </ul>
+</div><!-- /.navbar-collapse -->

@@ -1,0 +1,13 @@
+<script type="text/javascript" src="/js/map.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/components/map.css"/>
+
+{% if site.theme.contact.latlng %}
+<div id="map" data-coords="{{site.theme.contact.latlng}}">
+  <a href="#map"></a>
+  <div class="company-location">
+    <h4>Hello {{site.theme.contact.company}}</h4>
+    <p>{{ site.theme.contact.city }}, {{ site.theme.contact.state }} {{ site.theme.contact.country }}</p>
+  </div>
+  <div id="map-canvas"></div>
+</div>
+{% endif %}

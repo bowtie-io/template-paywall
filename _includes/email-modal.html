@@ -1,0 +1,50 @@
+<a href="#" class="btn btn-default" data-toggle="modal" data-target="#emailform">Contact Us</a>
+
+<!-- Email Modal -->
+<div class="modal fade" id="emailform" tabindex="-1" role="dialog" aria-labelledby="#" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body text-left">
+        <h2>Send Us a Message</h2>
+        <div>
+        <form action="mailto:{{ site.email }}?subject=feedback" enctype="text/plain" method="post">
+          <div class='form-group'>
+            <div class="input">
+              <label class="text">
+                Your Name
+              </label>
+              <input aria-required="true" class="string text form-control" id="twitter" maxlength="255" name="Name" placeholder="Tony Stark"  size="255" type="text" value="" />
+            </div>
+          </div>
+
+          <div class='form-group'>
+            <div class="input">
+              <label class="text">
+                <i class="fa fa-envelope-o"></i>Email Address
+              </label>
+              <input aria-required="true" class="string text form-control" maxlength="255"  name="Email" id="user_email" placeholder="tony@example.com"  size="255" type="text" value="" />
+            </div>
+          </div>
+
+          <div class='form-group'>
+            <div class="field-box">
+              <label>Message</label>
+              <textarea class="form-control" id="user_info" name="Message" rows="4"></textarea>
+            </div>
+          </div>
+        </div>
+      </div><!-- modal body -->
+
+      <div class="modal-footer">
+        <div class='form-actions text-center'>
+          <input id="Submit" class="button btn btn-success" name="Submit" type="submit" value="Create Email" />
+        </div>
+      </div>
+    </form>
+
+    </div>
+  </div>
+</div>

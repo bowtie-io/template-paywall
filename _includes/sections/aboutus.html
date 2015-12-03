@@ -1,0 +1,62 @@
+<!-- IMPORTANT: You will need to enter your email address into your form on your browser and submit first per Formspree.io's directions.
+ Go to your website and submit the form once. This will send you an email asking to confirm your email address, so that no one can start sending you spam from random websites. -->
+
+<section id="about" class="section">
+  <div class="container row-80 text-center">
+    <div class="row">
+      <column class="col-xs-7">
+      <h4>Send Us a Message</h4>
+      <form action="//formspree.io/{{ site.email }}" method="POST" class="text-left">
+        <div class='form-group'>
+          <div class="input">
+            <label class="text">
+              Your Name
+            </label>
+            <input aria-required="true" class="string text form-control" id="twitter" maxlength="255" name="Name" placeholder="Jane Doe" size="255" type="text" required/>
+          </div>
+        </div>
+
+        <div class='form-group'>
+          <div class="input">
+            <label class="text">
+              <i class="fa fa-envelope-o"></i>Email Address
+            </label>
+            <input aria-required="true" class="string text form-control" maxlength="255" name="Email" id="user_email" placeholder="jane@example.com" size="255" type="text" required/>
+          </div>
+        </div>
+
+        <div class='form-group'>
+          <div class="field-box">
+            <label>Message</label>
+            <textarea class="form-control" id="user_info" name="Message" rows="4" required></textarea>
+          </div>
+        </div>
+
+        <div class='form-actions text-center'>
+          <input id="Submit" class="button btn btn-info" name="Submit" type="submit" value="Create Email" />
+          <input type="hidden" name="_next" value="{{ site.url }}" />
+        </div>
+      </form>
+    </column>
+
+    <column class="col-xs-4 col-xs-offset-1">
+      <h4>Visit Us</h4>
+      <div class="text-left">
+        <span>
+          <strong>Address</strong>
+          <br>
+          {{ site.theme.contact.address }}<br>
+          {{ site.theme.contact.city }} {{ site.theme.contact.state }} {{ site.theme.contact.zip }}<br>
+          P: {{ site.theme.contact.phone }}
+        </span>
+        <p>&nbsp;</p><br/>
+        <span>
+          <strong>Email</strong>
+          <br>
+          <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        </span>
+      </div>
+    </column>
+    </row>
+  </div>
+</section>

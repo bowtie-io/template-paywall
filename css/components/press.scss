@@ -1,0 +1,20 @@
+---
+# this front matter renders the file as css
+---
+
+/***************** Press Section *****************/
+
+#press{
+  .press-logos{
+    a{
+      display: inline-block;
+      vertical-align: middle;
+      padding: 10px 15px;
+      text-decoration: none;
+      outline: medium none;
+      }
+    img {
+      height:30px;
+    }
+  }
+}

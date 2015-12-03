@@ -1,0 +1,35 @@
+---
+layout: blog-index
+permalink: /blog/
+title:  "Blog"
+subtitle: "This is your blog index page."
+masthead-img: false
+masthead-img-pat: /img/backgrounds/bg2.jpg
+author: john
+date:   2015-01-01 12:00:01
+categories: bowtie blog
+comments:
+share:
+---
+
+<div class="blog">
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      {% if post.author %}
+        {% assign author = site.theme.authors[post.author] %}
+      {% endif %}
+      <li>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+        <p class="post-meta small">{{ post.date | date: "%b %-d, %Y" }}</p>
+        {{ post.excerpt }}
+        {% include post-meta.html %}
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>

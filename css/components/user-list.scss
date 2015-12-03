@@ -1,0 +1,37 @@
+---
+# this front matter renders the file as css
+---
+
+/******************* User List ****************************/
+.user-list {
+  color:#000;
+  font-weight:400;
+  font-size:14px;
+  span {
+    word-break:keep-all;
+    }
+  img{
+    width: 50px;
+    height: 50px;
+    margin-right:10px;
+  }
+  .rating{
+    float:right;
+    line-height:50px;
+    font-size: 12px;
+    color:#000;
+  }
+}
+.list-group-item.active {
+  .rating, .rating i, .rating:hover, .rating:hover i{
+    color:#fff !important;
+  }
+}
+a.list-group-item:hover, a.list-group-item:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #34495E;
+    .rating, .rating i{
+      color:#fff !important;
+    }
+  }

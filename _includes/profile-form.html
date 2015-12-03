@@ -1,0 +1,124 @@
+<!-- include profile.js to add information to bowtie user profiles -->
+<script type="text/javascript" src="/js/profile.js"></script>
+
+<h2 class="panel-heading">Edit Profile</h2>
+<div class='form-group'>
+  <div id="profile" class="user-profile text-left">
+    <div class="row img-upload">
+      <div class="col-xs-4">
+        <img id="avatar" src='/img/user2.png' class='img img-circle'>
+      </div>
+      <div class="col-xs-8">
+        <form class="form-inline" role="form">
+          <div class="form-group">
+            <label for="exampleInputFile">Profile Pic</label>
+            <input type="file" id="avatar-upload">
+            <p class="help-block">Select a new img (1MB Max) </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class='form-group'>
+      <div class="input">
+        <label class="text">
+          <i class="fa fa-twitter"></i>Twitter ID
+        </label>
+        <input aria-required="true" class="string text form-control" id="twitter" maxlength="255" name="user[twitter]" placeholder="@example"  size="255" type="text" value="" />
+      </div>
+    </div>
+    <div class='form-group'>
+      <label class="text">
+        Select Something
+      </label>
+      <div class="select-style">
+        <div class="input select required user_plan_id">
+          <select class="select" id="user_plan_id" name="user[plan_id]">
+            <option value="">Example 1</option>
+            <option value="">Example 2</option>
+            <option value="">Example 3</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class='form-group'>
+    {% include datepicker.html %}
+    </div>
+    <div class='form-group'>
+      <div class="field-box">
+        <label>Info:</label>
+        <small class="pull-right note"> Input Instructions</small>
+        <textarea class="form-control" id="user_info" rows="4"></textarea>
+      </div>
+    </div>
+    <br>
+    <form class="form-horizontal" role="form">
+      <div class="form-group row">
+        <label class="col-xs-2" for="name">
+          Name:
+        </label>
+        <div class="col-xs-8">
+          <input type="email" class="form-control disabled" id="user_name" placeholder="user name" disabled="true">
+        </div>
+        <div class="col-xs-2">
+          <a class="btn-sm btn btn-primary" href="/users/edit">
+            Edit
+          </a>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-xs-2" for="email">
+          Email:
+        </label>
+        <div class="col-xs-8">
+          <input type="email" class="form-control disabled" id="user_email" placeholder="user.email" disabled="true">
+        </div>
+        <div class="col-xs-2">
+          <a class="btn-sm btn btn-primary" href="/users/edit">
+            Edit
+          </a>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-xs-2" for="password">
+          Pswd:
+        </label>
+        <div class="col-xs-8">
+          <input type="email" class="form-control disabled" id="user_password" placeholder="********" disabled="true">
+        </div>
+        <div class="col-xs-2">
+          <a class="btn-sm btn btn-primary" href="/users/edit">
+            Edit
+          </a>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-xs-2" for="plan">
+          Plan:
+        </label>
+        <div class="col-xs-8">
+          <input type="email" class="form-control" id="user_plan" placeholder="User Plan Name" disabled>
+        </div>
+        <div class="col-xs-2">
+          <a class="btn-sm btn btn-primary" href="/users/plan">
+            Edit
+          </a>
+        </div>
+      </div>
+    </form>
+    <br />
+    <div class='form-actions text-center'>
+      <input id="update_profile" class="button btn btn-success" name="commit" type="submit" value="Save">
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+bowtie.user.info(function(user){
+  if(!user){
+    // There is no user signed in
+  }else{
+    $("#user_name").val(user.name);
+    $("#user_email").val(user.email);
+    $("#user_plan").val(user.plan_id);
+</script>

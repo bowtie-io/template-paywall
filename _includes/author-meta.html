@@ -1,0 +1,22 @@
+{% if page.author %}
+  {% assign author = site.theme.authors[page.author] %}
+{% endif %}
+
+<p class="post-meta">
+  {% if page.author %}
+  <img class="img post-avatar pull-left" src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=64">
+  <span class="author">by {{ author.display_name }}</span>
+    {% if author.twitter %}
+      <span class="author-twitter"><a href="//twitter.com/{{ author.twitter }}"><i class="fa fa-twitter fa-1x"></i></a></span>
+    {% endif %}
+    {% if author.facebook %}
+      <span class="author-facebook"><a href="//facebook.com/{{ author.facebook }}"><i class="fa fa-facebook fa-1x"></i></a></span>
+    {% endif %}
+    {% if author.github %}
+      <span class="author-github"><a href="//github.com/{{ author.github }}"><i class="fa fa-github fa-1x"></i></a></span>
+    {% endif %}
+  |&nbsp;
+  {% endif %}
+  {{ page.date | date: "%b %-d, %Y" }}
+  {% if page.meta %} | {{ page.meta }}{% endif %}
+</p>

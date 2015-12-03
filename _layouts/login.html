@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body class="bg">
+    <div class="content-wrap row">
+      {% include flash.html %}
+      <div class="login-wrapper">
+
+        <div class='identity text-center'>
+          <a href='/'>
+            <img src='/img/logo.png'>
+          </a>
+        </div>
+        <panel class='panel text-center'>
+          <div class='panel-body'>
+        {{ content }}
+        <div class='container-fluid sharedlinks'>
+          <div class="btn-group-sm" >
+            <a class="btn" href="/users/sign_in">Sign in</a>
+            <a class="btn" href="/users/confirmation/new">Resend Confirmation</a>
+          </div>
+        </div>
+        </panel>
+        <div id="footer" class="no-bg no-border">
+        {% include subfooter.html %}
+        </div>
+
+      </div>
+    </div>
+  {% include tracking.html %}
+  </body>
+
+</html>
