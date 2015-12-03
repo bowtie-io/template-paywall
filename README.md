@@ -2,9 +2,9 @@
 
 'Static Site with Paywall' is a Jeykll template that demonstrates the creation of a paywall using [Stripe](https://streipe.com) subscription plans with [BowTie.io](https://bowtie.io) user management and policy controls. This template is meant as a learning resource and is compatible with other BowTie components and templates.
 
-This template includes components landing page and blog components, custom post authorship, category sorting, [disqus](https://disqus.com/) commenting, [addthis](http://www.addthis.com/) social sharing, error pages, a maintenance page, terms of service generation, post archives, google maps, and user management and registration provided by BowTie.
+This template includes landing page and blog components, custom post authorship, category sorting, [disqus](https://disqus.com/) commenting, [addthis](http://www.addthis.com/) social sharing, error pages, a maintenance page, terms of service generation, post archives, google maps, and user management and registration provided by BowTie.
 
-The theme uses [jquery](https://jquery.com/), [bootstrap](http://getbootstrap.com/), [fontawesome](https://fortawesome.github.io/Font-Awesome/), and a custom theme styles written in [SCSS](http://sass-lang.com/).  The layout was inspired by the [Casper](https://github.com/TryGhost/Casper) theme for Ghost.
+The theme uses [jquery](https://jquery.com/), [bootstrap](http://getbootstrap.com/), [fontawesome](https://fortawesome.github.io/Font-Awesome/), and a custom theme styles written in [SCSS](http://sass-lang.com/). 
 
 ### [View Example Site](https://paywall.bowtied.io/)
 
