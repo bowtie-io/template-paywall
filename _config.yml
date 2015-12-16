@@ -59,6 +59,8 @@ theme:
 permalink:           /:categories/:title/
 relative_permalinks: false
 
+gems: [jekyll-paginate]
+
 # Pagination config
 paginate: 5
 paginate_path: /page/:num
