@@ -1,16 +1,6 @@
 <!-- include profile.js to add information to bowtie user profiles -->
 <script type="text/javascript" src="/js/profile.js"></script>
 
-<script type="text/javascript">
-bowtie.user.info(function(user){
-  if(!user){
-    // There is no user signed in
-  }else{
-    $("#user_name").val(user.name);
-    $("#user_email").val(user.email);
-    $("#user_plan").val(user.plan_id);
-</script>
-
 
 <a href="#" class="btn btn-info" data-toggle="modal" data-target="#profile">Edit Profile</a>
 
@@ -55,11 +45,11 @@ bowtie.user.info(function(user){
                   Select Something
                 </label>
                 <div class="select-style">
-                  <div class="input select required user_plan_id">
-                    <select class="select" id="user_plan_id" name="user[plan_id]">
-                      <option value="">Example 1</option>
-                      <option value="">Example 2</option>
-                      <option value="">Example 3</option>
+                  <div class="input select required">
+                    <select class="select" id="select-something" name="user[selection]" >
+                      <option>Example 1</option>
+                      <option>Example 2</option>
+                      <option>Example 3</option>
                     </select>
                   </div>
                 </div>
@@ -141,3 +131,18 @@ bowtie.user.info(function(user){
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+bowtie.user.profile(function(user){
+  if(!user){
+    // There is no user signed in
+  }else{
+    $("#user_name").val(user.name);
+    $("#user_email").val(user.email);
+    $("#user_plan").val(user.plan_id);
+    $("#twitter").val(user.twitter);
+    $("#user_info").val(user.info);
+    $("#select-something").val(user.selection);
+  }
+});
+</script>
