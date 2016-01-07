@@ -31,18 +31,15 @@ $(function(){
   });
 
   $("#update_profile").on("click", function(){
-    var twitter = $('#twitter').val();
-    var selectSomething = $('#select-something').val();
-    var dateSelection = $('#date-selection').val();
-    var userInfo = $('#user_info').val();
-
+    var profileTwitterHandle = $('#profile_twitter_handle').val();
+    var profileSelection = $('#profile_selection').val();
+    var profileMessage = $('#profile_message').val();
 
     // Store the new twitter handle to the Bowtie User Profile
     bowtie.user.profile({
-      twitter: twitter,
-      selection: selectSomething,
-      date: dateSelection,
-      info: userInfo,
+      twitter_handle: profileTwitterHandle,
+      selection: profileSelection,
+      message: profileMessage,
     }, function(){
       alert("saved");
     })
